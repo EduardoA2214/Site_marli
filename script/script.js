@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- CARROSSEL ---
+    // --- LÓGICA DO CARROSSEL ---
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-item');
 
@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[currentSlide].classList.add('active');
     };
 
+    // Troca automática a cada 5 segundos
     setInterval(() => changeSlide(1), 5000);
 
-    // --- MAPA ---
+    // --- LÓGICA DO MAPA (ABRIR/FECHAR) ---
     const btnMapa = document.getElementById('btn-mapa');
     const mapContainer = document.getElementById('map-container');
 
