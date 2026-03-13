@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gêneros Literários</title>
+    <link rel="icon" type="image/png" href="../img/icone.png">
+    <link rel="stylesheet" href="../style/genero.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gêneros Literários</h1>
+        <p>Explore os diversos mundos da leitura</p>
+    </header>
+
+    <main class="container">
+        <section class="genres-section">
+            <div class="genres-grid">
+                <div class="genre-card" onclick="toggleGenre(this)">
+                    <div class="genre-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Romance</h3>
+                    <p>Histórias de amor e paixão.</p>
+                    <div class="genre-details">
+                        <p><strong>Romântico:</strong> Amor apaixonado e finais felizes.</p>
+                        <p><strong>Histórico:</strong> Amor em contextos passados.</p>
+                    </div>
+                </div>
+
+                <div class="genre-card" onclick="toggleGenre(this)">
+                    <div class="genre-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Ficção Científica</h3>
+                    <p>Mundos futuros e tecnologia.</p>
+                    <div class="genre-details">
+                        <p><strong>Space Opera:</strong> Aventuras espaciais épicas.</p>
+                        <p><strong>Cyberpunk:</strong> Futuro distópico com alta tecnologia.</p>
+                    </div>
+                </div>
+
+                <div class="genre-card" onclick="toggleGenre(this)">
+                    <div class="genre-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Fantasia</h3>
+                    <p>Mundos mágicos e seres míticos.</p>
+                    <div class="genre-details">
+                        <p><strong>Alta Fantasia:</strong> Mundos complexos e épicos.</p>
+                        <p><strong>Urban Fantasy:</strong> Magia no mundo moderno.</p>
+                    </div>
+                </div>
+
+                <div class="genre-card" onclick="toggleGenre(this)">
+                    <div class="genre-icon"><i class="fas fa-book"></i></div>
+                    <h3>Não-Ficção</h3>
+                    <p>Conhecimentos baseados em fatos.</p>
+                    <div class="genre-details">
+                        <p><strong>Biografias:</strong> Vidas de pessoas reais.</p>
+                        <p><strong>Ciência:</strong> Descobertas e teorias.</p>
+                    </div>
+                </div>
+
+                <div class="genre-card" onclick="toggleGenre(this)">
+                    <div class="genre-icon"><i class="fas fa-child"></i></div>
+                    <h3>Infantil</h3>
+                    <p>Livros para crianças e jovens.</p>
+                    <div class="genre-details">
+                        <p><strong>Contos:</strong> Histórias curtas e divertidas.</p>
+                        <p><strong>Educativos:</strong> Aprendizado através da leitura.</p>
+                    </div>
+                </div>
+
+                <div class="genre-card" onclick="toggleGenre(this)">
+                    <div class="genre-icon"><i class="fas fa-landmark"></i></div>
+                    <h3>História</h3>
+                    <p>Eventos e figuras do passado.</p>
+                    <div class="genre-details">
+                        <p><strong>Antiga:</strong> Civilizações clássicas.</p>
+                        <p><strong>Moderna:</strong> Séculos recentes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="back-section">
+            <a href="../index.html" class="btn-interactive" style="text-decoration: none;">← Voltar para a página inicial</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Desenvolvedor - Eduardo da Silva Assis</p>
+    </footer>
+
+    <script src="../script/generos.js"></script>
+    <script>
+        function toggleGenre(card) {
+            const details = card.querySelector('.genre-details');
+            const isVisible = details.style.display === 'block';
+            details.style.display = isVisible ? 'none' : 'block';
+            card.classList.toggle('expanded', !isVisible);
+        }
+    </script>
+</body>
+</html>

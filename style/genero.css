@@ -1,0 +1,182 @@
+/* Importação de fontes para manter o padrão */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primaria: #4cc9f0;
+    --detalhe: #f72585;
+    --texto: #333;
+    --educativo: #4361ee;
+    --background-gradient: linear-gradient(135deg, rgba(76, 201, 240, 0.1), rgba(247, 37, 133, 0.08));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-gradient);
+    min-height: 100vh;
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Header Estilizado */
+header {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--educativo);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+}
+
+header h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primaria), var(--detalhe));
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 300;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 100px;
+}
+
+/* Grid de Gêneros */
+.genres-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Cards de Gênero - Estilo Glassmorphism */
+.genre-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.genre-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--primaria);
+}
+
+.genre-card.expanded {
+    border: 2px solid var(--detalhe);
+    background: #fff;
+}
+
+/* Ícones */
+.genre-icon {
+    font-size: 3rem;
+    color: var(--primaria);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.genre-card:hover .genre-icon {
+    transform: scale(1.2);
+    color: var(--detalhe);
+}
+
+.genre-card h3 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    color: var(--educativo);
+    margin-bottom: 10px;
+}
+
+/* Detalhes (Escondidos inicialmente) */
+.genre-details {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.genre-details p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.genre-details strong {
+    color: var(--detalhe);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Seção de Botão Voltar */
+.back-section {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.btn-interactive {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--primaria);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(76, 201, 240, 0.3);
+}
+
+.btn-interactive:hover {
+    background: var(--detalhe);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(247, 37, 133, 0.4);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 15px;
+    }
+    
+    .genres-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
