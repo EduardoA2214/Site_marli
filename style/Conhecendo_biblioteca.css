@@ -1,4 +1,3 @@
-
 /* Estilização específica desta página */
 .page-biblioteca {
     background: linear-gradient(135deg, rgba(76, 201, 240, 0.1), rgba(247, 37, 133, 0.08));
@@ -101,27 +100,37 @@
     right: 15px;
 }
 
-/* Indicadores do carrossel */
-.page-biblioteca .carousel-indicators {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
+/* Seção do botão de voltar */
+.back-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-interactive {
+    display: inline-flex;
+    align-items: center;
     gap: 10px;
+    padding: 15px 35px;
+    background: var(--primaria);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(76, 201, 240, 0.3);
 }
 
-.page-biblioteca .indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.page-biblioteca .indicator.active {
+.btn-interactive:hover {
     background: var(--detalhe);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(247, 37, 133, 0.4);
+}
+
+.btn-interactive i {
+    transition: transform 0.3s ease;
+}
+
+.btn-interactive:hover i {
+    transform: translateX(-5px);
 }
 
 /* Responsividade */
