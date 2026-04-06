@@ -2,10 +2,13 @@
 .page-biblioteca {
     background: linear-gradient(135deg, rgba(76, 201, 240, 0.1), rgba(247, 37, 133, 0.08));
     min-height: 100vh;
-    padding: 100px 0 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 0;
 }
 
 .page-biblioteca main {
+    flex: 1;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
@@ -131,6 +134,14 @@
 
 .btn-interactive:hover i {
     transform: translateX(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.9rem;
+    color: #888;
+    background-color: transparent;
 }
 
 /* Responsividade */
