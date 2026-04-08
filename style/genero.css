@@ -1,12 +1,14 @@
 /* Importação de fontes para manter o padrão */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Poppins:wght@300;400;600&display=swap');
 
+/* CORES ATUALIZADAS COM BASE NA FOTO DA ESCOLA */
 :root {
-    --primaria: #4cc9f0;
-    --detalhe: #f72585;
-    --texto: #333;
-    --educativo: #4361ee;
-    --background-gradient: linear-gradient(135deg, rgba(76, 201, 240, 0.1), rgba(247, 37, 133, 0.08));
+    --primaria: #4c7c6d;    /* Verde Musgo da base da parede */
+    --detalhe: #c83737;     /* Vermelho da faixa central */
+    --texto: #2b2d42;       /* Tom escuro para leitura */
+    --educativo: #2d4f44;   /* Verde escuro para títulos */
+    /* Gradiente suave usando o tom gelo e um toque do verde da escola */
+    --background-gradient: linear-gradient(135deg, #f4f4f2, #e8edea);
 }
 
 * {
@@ -33,7 +35,7 @@ header h1 {
     font-family: 'Fredoka', sans-serif;
     font-size: clamp(2.5rem, 5vw, 4rem);
     color: var(--educativo);
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     margin-bottom: 10px;
 }
 
@@ -42,6 +44,7 @@ header h1::after {
     display: block;
     width: 80px;
     height: 4px;
+    /* Linha decorativa com as cores da escola */
     background: linear-gradient(90deg, var(--primaria), var(--detalhe));
     margin: 20px auto 0;
     border-radius: 2px;
@@ -49,7 +52,7 @@ header h1::after {
 
 header p {
     font-size: 1.2rem;
-    color: #666;
+    color: #555;
     font-weight: 300;
 }
 
@@ -74,7 +77,7 @@ header p {
     padding: 30px;
     border-radius: 25px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -85,7 +88,7 @@ header p {
 
 .genre-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(76, 124, 109, 0.15);
     border-color: var(--primaria);
 }
 
@@ -104,7 +107,7 @@ header p {
 
 .genre-card:hover .genre-icon {
     transform: scale(1.2);
-    color: var(--detalhe);
+    color: var(--detalhe); /* Ícone fica vermelho no hover */
 }
 
 .genre-card h3 {
@@ -119,7 +122,7 @@ header p {
     display: none;
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     text-align: left;
     animation: fadeIn 0.5s ease forwards;
 }
@@ -130,7 +133,7 @@ header p {
 }
 
 .genre-details strong {
-    color: var(--detalhe);
+    color: var(--detalhe); /* Destaques internos em vermelho */
 }
 
 @keyframes fadeIn {
@@ -152,13 +155,14 @@ header p {
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(76, 201, 240, 0.3);
+    box-shadow: 0 10px 20px rgba(76, 124, 109, 0.2);
+    border: none;
 }
 
 .btn-interactive:hover {
     background: var(--detalhe);
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(247, 37, 133, 0.4);
+    box-shadow: 0 10px 25px rgba(200, 55, 55, 0.3);
 }
 
 /* Footer */
@@ -166,7 +170,7 @@ footer {
     text-align: center;
     padding: 40px;
     font-size: 0.9rem;
-    color: #888;
+    color: #777;
 }
 
 /* Responsividade */
@@ -179,4 +183,4 @@ footer {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-}
+}s

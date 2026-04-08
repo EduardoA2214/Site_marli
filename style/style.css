@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap');
 
+/* CORES ATUALIZADAS COM BASE NA FOTO DA ESCOLA */
 :root {
-    --primaria: #4cc9f0;
-    --secundaria: #4895ef;
-    --detalhe: #f72585;
-    --educativo: #7209b7;
-    --fundo: #f0f9ff;
-    --texto: #2b2d42;
+    --primaria: #4c7c6d;    /* Verde Musgo da base da parede */
+    --secundaria: #c83737;  /* Vermelho da faixa central */
+    --detalhe: #c83737;     /* Usando o vermelho para detalhes e bordas */
+    --educativo: #2d4f44;   /* Um verde mais escuro para contrastar textos */
+    --fundo: #f4f4f2;       /* Branco/Gelo da parte superior da parede */
+    --texto: #2b2d42;       /* Mantido escuro para leitura */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -37,7 +38,7 @@ header h1 { font-family: 'Fredoka', sans-serif; font-size: 2.2rem; }
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(76, 201, 240, 0.95);
+    background: rgba(76, 124, 109, 0.95); /* Versão semi-transparente do Verde */
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 10px 0;
@@ -65,7 +66,7 @@ header h1 { font-family: 'Fredoka', sans-serif; font-size: 2.2rem; }
     padding: 8px 15px;
     border-radius: 25px;
     transition: background 0.3s ease, transform 0.2s ease;
-    white-space: nowrap; /* Impede a quebra de linha que estava entortando o menu */
+    white-space: nowrap; 
     display: block;
 }
 
@@ -101,7 +102,7 @@ header h1 { font-family: 'Fredoka', sans-serif; font-size: 2.2rem; }
 
 .main-photo:hover {
     transform: scale(1.03) rotate(3deg);
-    box-shadow: 0 15px 35px rgba(76, 201, 240, 0.4);
+    box-shadow: 0 15px 35px rgba(76, 124, 109, 0.4);
 }
 
 .bio-text h2 { color: var(--educativo); font-family: 'Fredoka', sans-serif; font-size: 2rem; margin-bottom: 10px; }
@@ -135,7 +136,7 @@ header h1 { font-family: 'Fredoka', sans-serif; font-size: 2.2rem; }
     border: none;
     font-family: 'Fredoka', sans-serif;
     font-size: 1.2rem;
-    box-shadow: 0 6px 0 #b91d63;
+    box-shadow: 0 6px 0 #8c2626; /* Sombra do botão em vermelho escuro */
     cursor: pointer;
 }
 
@@ -243,11 +244,11 @@ footer { background: var(--texto); color: white; text-align: center; padding: 40
     }
 
     .top-menu ul {
-        gap: 5px; /* Espaço reduzido para caber tudo */
+        gap: 5px; 
         padding: 0 5px;
-        overflow-x: auto; /* Se ainda for muito grande, ele desliza pro lado */
-        justify-content: space-evenly; /* Distribui os itens igualmente */
-        flex-wrap: nowrap; /* PROIBE quebrar linha */
+        overflow-x: auto; 
+        justify-content: space-evenly; 
+        flex-wrap: nowrap; 
         -webkit-overflow-scrolling: touch;
     }
 
@@ -257,7 +258,7 @@ footer { background: var(--texto); color: white; text-align: center; padding: 40
 
     .top-menu li a {
         padding: 8px 10px;
-        font-size: 0.85rem; /* Fonte levemente menor para mobile */
+        font-size: 0.85rem; 
     }
 
     header {

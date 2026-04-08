@@ -1,6 +1,7 @@
 /* Estilização específica desta página */
 .page-biblioteca {
-    background: linear-gradient(135deg, rgba(76, 201, 240, 0.1), rgba(247, 37, 133, 0.08));
+    /* Gradiente suave usando o tom gelo da parede */
+    background: linear-gradient(135deg, #f4f4f2, #e8edea);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,8 +20,8 @@
     margin-bottom: 40px;
     font-family: 'Fredoka', sans-serif;
     font-size: clamp(2.5rem, 5vw, 4rem);
-    color: var(--educativo);
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    color: var(--educativo); /* Verde escuro da escola */
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     position: relative;
 }
 
@@ -29,6 +30,7 @@
     display: block;
     width: 80px;
     height: 4px;
+    /* Linha decorativa com as cores da escola */
     background: linear-gradient(90deg, var(--primaria), var(--detalhe));
     margin: 20px auto 0;
     border-radius: 2px;
@@ -40,7 +42,7 @@
     padding: 40px 25px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 25px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     overflow: hidden;
 }
@@ -74,7 +76,7 @@
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.8);
     color: var(--texto);
-    border: 2px solid rgba(76, 201, 240, 0.3);
+    border: 2px solid rgba(76, 124, 109, 0.2); /* Borda em Verde Musgo suave */
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -89,10 +91,10 @@
 
 .page-biblioteca .prev:hover,
 .page-biblioteca .next:hover {
-    background: var(--primaria);
+    background: var(--primaria); /* Fica Verde Musgo no hover */
     color: white;
     transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 8px 20px rgba(76, 201, 240, 0.4);
+    box-shadow: 0 8px 20px rgba(76, 124, 109, 0.3);
 }
 
 .page-biblioteca .prev {
@@ -114,18 +116,19 @@
     align-items: center;
     gap: 10px;
     padding: 15px 35px;
-    background: var(--primaria);
+    background: var(--primaria); /* Verde Musgo */
     color: white;
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 10px 20px rgba(76, 201, 240, 0.3);
+    box-shadow: 0 10px 20px rgba(76, 124, 109, 0.2);
+    border: none;
 }
 
 .btn-interactive:hover {
-    background: var(--detalhe);
+    background: var(--detalhe); /* Vermelho no hover */
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(247, 37, 133, 0.4);
+    box-shadow: 0 15px 30px rgba(200, 55, 55, 0.3);
 }
 
 .btn-interactive i {
@@ -140,7 +143,7 @@ footer {
     text-align: center;
     padding: 40px;
     font-size: 0.9rem;
-    color: #888;
+    color: #777;
     background-color: transparent;
 }
 
